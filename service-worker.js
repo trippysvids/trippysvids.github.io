@@ -1,6 +1,7 @@
+// service-worker.js
 const blockedPatterns = [
     /scamsite\.com/,
-    /ad\.domain\.com/,
+    /unwanted\-site\.com/,
     // Add other patterns here
   ];
   
@@ -13,4 +14,3 @@ const blockedPatterns = [
       event.respondWith(fetch(event.request));
     }
   });
-  

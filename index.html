@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://vidsrc.xyz; frame-src 'self' https://vidsrc.xyz; connect-src 'self' https://vidsrc.xyz; object-src 'none';">
-    <title>New Game</title>
+    <title>Trippy's Vids</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    
 </head>
 <body>
     <script>
@@ -22,10 +20,21 @@
               });
           });
         }
-      </script>
-      
+    </script>
+
     <div id="player">
+        <h1 style="color:#fff">Trippy's Vid's</h1>
+        <input type="text" id="searchInput" placeholder="Enter show/movie title">
+        <input type="text" id="season" placeholder="Enter Season">
+        <input type="text" id="episode" placeholder="Enter Episode">
+        <button id="movie" onclick="toMovie()">Is Movie</button>
+        <button id="show" onclick="toShow()">Is TvShow</button>
+        <button id="searchButton">Search</button>
+        <div id="resultsContainer"></div>
+        <div id="imdbID"></div>
+        
         <iframe id="video" src="https://vidsrc.xyz/embed/tv?imdb=tt0944947&season=1&episode=1" title="Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="info"></div> <!-- Added for season and episode info -->
     </div>
     <script src="script.js"></script>
 </body>

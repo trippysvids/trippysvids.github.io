@@ -1,14 +1,17 @@
 @media screen and (orientation: landscape){
     #video {
-        width:64vw;
-        height:64vh;
+        width:32vw;
+        height:32vh;
     }
 }
 
-@media screen and (orientati6ortrait){
+@media screen and (orientation: portrait){
     #video {
-        width:64vw;
-        height:64vh;
+        width:80vw;
+        height:32vh;
+        position:fixed;
+        left:50%;
+        transform:translateX(-50%);
     }
 }
 
@@ -16,5 +19,45 @@
     background-color:#333;
     width:101vw;
     height:101vh;
-    transform:translate(-1vw, -1vh);
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+#imdbID {
+    color:#fff;
+    font-size:3vw;
+}
+
+.results-list {
+    list-style-type: none;
+    padding: 0;
+}
+.results-list li {
+    margin: 5px 0;
+}
+.results-list button {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.results-list button:hover {
+    text-decoration: none;
+}
+
+#info {
+    width: 75vw;
+    max-width: 30vh; 
+    height: 30vh;
+    font-size: 15px;
+    text-align:center;
+    color: #fff;
+    position: relative;
+    overflow:scroll;
+}
+
+.seasonDis {
+    font-size: 1rem;
 }
