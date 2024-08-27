@@ -226,6 +226,17 @@ let ids = {
     "Basket Case": "tt0083624",
     "Basket Case 2": "tt0099108",
     "Basket Case 3": "tt0103773",
+    "Guardians of the Galaxy": "tt2015381",
+    "Guardians of the Galaxy 2": "tt3896198",
+    "Guardians of the Galaxy 3": "tt6791350",
+    "My Neighbor Totoro": "tt0096283",
+    "Spirited Away": "tt0245429",
+    "Castle in the Sky": "tt1620710",
+    "The Secret World of Arrietty": "tt1568291",
+    "Ponyo": "tt0876563",
+    "Howl's Moving Castle": "tt0347149",
+    "The Cat Returns": "tt0347618",
+    
 };
 
 const reversedIds = Object.fromEntries(
