@@ -223,6 +223,9 @@ let ids = {
     "Midsommar": "tt8772262",
     "Terrifier": "tt4281724",
     "Terrifier 2": "tt10403420",
+    "Basket Case": "tt0083624",
+    "Basket Case 2": "tt0099108",
+    "Basket Case 3": "tt0103773",
 };
 
 const reversedIds = Object.fromEntries(
