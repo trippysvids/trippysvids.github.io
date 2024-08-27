@@ -345,6 +345,7 @@ let showInfo = {
     "The Walking Dead": { seasons: 11, episodes: [6, 16, 16, 16, 16, 16, 16, 16, 16, 24, 24] }
 };
 
+let currentId;
 
 let isShow = true;
 let isMovie = false;
@@ -426,6 +427,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isShow){
             const season = document.getElementById("season")?.value || 1;
             const episode = document.getElementById("episode")?.value || 1;
+            currentId = id;
             iframe.src = `https://vidsrc.xyz/embed/tv?imdb=${id}&season=${season}&episode=${episode}`;
             displaySeasonsAndEpisodes(id);
         }else if (isMovie) {
@@ -460,3 +462,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+function playEpisode(){
+    if (isShow){
+        const iframe = document.getElementById('video');
+        const season = document.getElementById("season")?.value || 1;
+        const episode = document.getElementById("episode")?.value || 1;
+        iframe.src = `https://vidsrc.xyz/embed/tv?imdb=${currentId}&season=${season}&episode=${episode}`;
+    }
+}

@@ -174,7 +174,14 @@
 }
 
 #episode {
-    left:55%; 
+    right:30%; 
+}
+
+#play {
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    top:85%;
 }
 
 #title {
