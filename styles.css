@@ -182,6 +182,8 @@
     left:50%;
     transform:translateX(-50%);
     top:85%;
+    width:14vw;
+    height:3vh;
 }
 
 #title {
