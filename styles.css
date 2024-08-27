@@ -2,6 +2,11 @@
     #video {
         width:32vw;
         height:32vh;
+        position:absolute;
+        left:50%;
+        transform:translateX(-50%);
+        top:50%;
+        border:#731a87 1vw solid;
     }
 }
 
