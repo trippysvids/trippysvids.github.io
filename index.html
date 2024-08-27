@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen&display=swap');
+    </style>
+</head>
+<body>
+    <div id="oceanRoom">
+        <div id="oceanBg" class="calmBg bg">
+            <div id="buildOverlay"></div>
+
+        </div>
+        <div id="oceanfg" class="fg">
+            
+            <div class="col turtleIsland" id="d0"></div>
+        </div>
+        <div id="oceanObj" class="calmObj obj">
+        </div>
+        <div id="ui">
+            <button id="invBtn" class="ui-btn" onclick="openInv()">i</button>
+            <button id="closeBtn" class="ui-btn" onclick="closeInv()">Esc</button>
+            <div id="inv">
+                <button id="itemBtn" class="invBtn" onclick="switchCategory('items')">Items</button>
+                <button id="skillsBtn" class="invBtn" onclick="switchCategory('skills')">Skills</button>
+                <button id="equipUIBtn" class="invBtn" onclick="switchCategory('equip')">Equip</button>
+                <button id="craftUIBtn" class="invBtn" onclick="switchCategory('craft')">Craft</button>
+                <div id="items" class="category" >
+                    <button id="delItem" class="actionBtn" onclick="trashItem()">Trash</button>
+                    <div class="descBg">
+                        <h1 id="itemDesc" class="descText"></h1>
+                    </div>
+                </div>
+                <div id="skills" class="category"></div>
+                <div id="equip" class="category"></div>
+                <div id="craft" class="category">
+                    <button id="craftItem" class="actionBtn" onclick="craftItem()">Craft</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="city1">
+        <div class="col building1" id="d1"></div>
+        <div class="col building2" id="d2"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
