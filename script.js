@@ -221,6 +221,8 @@ let ids = {
     "Insidious": "tt1591095",
     "Evil Dead II": "tt0092991",
     "Midsommar": "tt8772262",
+    "Terrifier": "tt4281724",
+    "Terrifier 2": "tt10403420",
 };
 
 const reversedIds = Object.fromEntries(
