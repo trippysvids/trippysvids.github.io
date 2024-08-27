@@ -1,14 +1,14 @@
 @media screen and (orientation: landscape){
     #video {
-        width:32vw;
-        height:32vh;
+        width:64vw;
+        height:64vh;
     }
 }
 
-@media screen and (orientation: portrait){
+@media screen and (orientati6ortrait){
     #video {
-        width:32vw;
-        height:32vh;
+        width:64vw;
+        height:64vh;
     }
 }
 
