@@ -412,6 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultButton.addEventListener('click', () => {
                     updateIframeSource(id);
                 });
+                resultButton.classList.add("searchResult");
                 resultsContainer.appendChild(resultButton);
             }
         }

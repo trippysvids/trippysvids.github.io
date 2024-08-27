@@ -7,11 +7,13 @@
 
 @media screen and (orientation: portrait){
     #video {
-        width:80vw;
+        width:90vw;
         height:32vh;
-        position:fixed;
+        position:absolute;
         left:50%;
         transform:translateX(-50%);
+        top:50%;
+        border:#731a87 1vw solid;
     }
 }
 
@@ -50,15 +52,136 @@
 
 #info {
     width: 75vw;
-    max-width: 30vh; 
-    height: 30vh;
+    max-width: 50vh; 
+    height: 20%;
     font-size: 15px;
-    text-align:center;
+    text-align: center;
     color: #fff;
-    position: relative;
-    overflow:scroll;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    background-color:#444;
+    transform: translateX(-50%);
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .seasonDis {
     font-size: 1rem;
+    margin: 10px;
+    flex: 1 1 30%; /* Adjusts the label to take up 30% of the row */
+    text-align: center;
+}
+
+.searchResult {
+    background:none;
+    border:none;
+    background-color:#333;
+    color:#fff;
+    width:69vw;
+    height:5vh;
+    margin-left:3vw;
+    margin-top:2vw;
+}
+
+#searchInput {
+    position:absolute;
+    top:25%;
+    height:3vh;
+    width:40vw;
+    left:15%;
+
+}
+
+#searchButton {
+    position:absolute;
+    left:60%;
+    top:25%;
+    width:15vw;
+    height:4vh;
+    background:none;
+    border:none;
+    background-color: #444;
+    color:#fff;
+    border:3px #731a87 solid;
+}
+
+.searchResult:hover, .searchResult:active {
+    background-color:#731a87;
+}
+
+#resultsContainer {
+    position:absolute;
+    top:30%;
+    width:75vw;
+    height:15vh;
+    overflow:scroll;
+    background-color:#444;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+#movieOrShow {
+    position:absolute;
+    top:10%;
+    font-size:2vh;
+    color:#fff;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+#movie, #show {
+    position:absolute;
+    top:15%;
+    width:30vw;
+    height:5%;
+    background-color:#fff;
+    border:#d1132f solid 3px;
+}
+
+#movie:disabled, #show:disabled {
+    border:#13d149 solid 2px;
+    background-color:#999;
+    color:#777;
+}
+
+#movie {
+    left:15%;
+
+}
+
+#show {
+    left:50%;
+}
+
+#season, #episode {
+    position:absolute;
+    top:85%;
+    width:14vw;
+    height:3vh;
+}
+
+#season {
+    left:30%;
+}
+
+#episode {
+    left:55%; 
+}
+
+#title {
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:#731a87;
+    width:100vw;
+    height:10vh;
+    text-align:center;
+}
+
+#titleText {
+    color:#fff;
 }

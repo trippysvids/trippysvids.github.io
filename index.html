@@ -23,16 +23,20 @@
     </script>
 
     <div id="player">
-        <h1 style="color:#fff">Trippy's Vid's</h1>
+      <div id="title">
+        <h1 style="color:#fff" id="titleTxt">Trippy's Vid's</h1>
+      </div>
         <input type="text" id="searchInput" placeholder="Enter show/movie title">
-        <input type="text" id="season" placeholder="Enter Season">
-        <input type="text" id="episode" placeholder="Enter Episode">
-        <button id="movie" onclick="toMovie()">Is Movie</button>
-        <button id="show" onclick="toShow()">Is TvShow</button>
+        <input type="text" id="season" placeholder="Season">
+        <input type="text" id="episode" placeholder="Episode">
+        <h1 id="movieOrShow">choose movie or show</h1>
+        <button id="movie" onclick="toMovie()">Movie</button>
+        <button id="show" onclick="toShow()">TvShow</button>
         <button id="searchButton">Search</button>
-        <div id="resultsContainer"></div>
+      
         <div id="imdbID"></div>
-        
+        <div id="resultsContainer"></div>
+
         <iframe id="video" src="https://vidsrc.xyz/embed/tv?imdb=tt0944947&season=1&episode=1" title="Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div id="info"></div> <!-- Added for season and episode info -->
     </div>
