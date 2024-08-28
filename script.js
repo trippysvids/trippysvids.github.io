@@ -236,9 +236,9 @@ let ids = {
     "Ponyo": "tt0876563",
     "Howl's Moving Castle": "tt0347149",
     "The Cat Returns": "tt0347618",
-    
-};
-
+    "Adventure Time Fionna & Cake": "tt15248880",
+    "Adventure Time Distant Lands": "tt11165358",
+}
 const reversedIds = Object.fromEntries(
     Object.entries(ids).map(([show, id]) => [id, show])
 );
@@ -353,7 +353,9 @@ let showInfo = {
     "The Terror": { seasons: 2, episodes: [10, 10] },
     "Santa Clarita Diet": { seasons: 3, episodes: [10, 10, 10] },
     "Ash vs Evil Dead": { seasons: 3, episodes: [10, 10, 10] },
-    "The Walking Dead": { seasons: 11, episodes: [6, 16, 16, 16, 16, 16, 16, 16, 16, 24, 24] }
+    "The Walking Dead": { seasons: 11, episodes: [6, 16, 16, 16, 16, 16, 16, 16, 16, 24, 24] },
+    "Adventure Time Fionna & Cake": { seasons: 1, episodes:[11]},
+    "Adventure Time Distant Lands": { seasons: 1, episodes:[4]},
 };
 
 let currentId;
