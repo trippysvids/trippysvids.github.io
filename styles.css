@@ -69,6 +69,7 @@
     background-color:#444;
     transform: translateX(-50%);
     overflow: scroll;
+    padding-bottom:6vh;
 
 }
 
@@ -102,6 +103,7 @@
     position:absolute;
     left:1vw;
     top:1vh;
+    overflow:scroll;
 }
 
 #seasonsPlace {
