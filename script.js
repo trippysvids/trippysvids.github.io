@@ -238,6 +238,10 @@ let ids = {
     "The Cat Returns": "tt0347618",
     "Adventure Time Fionna & Cake": "tt15248880",
     "Adventure Time Distant Lands": "tt11165358",
+    "Futurama Benders Game": "tt1054486",
+    "Futurama Benders Big Score": "tt0471711",
+    "Futurama The Beast With A Billion Backs": "tt1054485",
+    "Futurama Into the Wild Green Yonder": "tt1054487",
 }
 
 let showInfo = {
