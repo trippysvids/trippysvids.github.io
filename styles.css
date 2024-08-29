@@ -8,6 +8,7 @@
         top:47%;
         border:#731a87 1vw solid;
     }
+    
 }
 
 @media screen and (orientation: portrait){
@@ -20,6 +21,7 @@
         top:45%;
         border:#731a87 1vw solid;
     }
+
 }
 
 #player {
@@ -73,14 +75,25 @@
 .seasonDis {
     font-size: 1rem;
     margin-right:1vw;
-    width:4vw;
+    width:12vw;
     height:5vh;
     text-align: center;
     background-color:#731a87;
     border:none;
     border-radius:15px;
     color:#fff;
+
 }
+
+.episodeBtn {
+    width:9vw;
+    height:4vh;
+    background-color:#555;
+    border:none;
+    border-radius:15px;
+    margin:.5vw;
+}
+
 
 #seasonDiv {
     width:73vw;
@@ -91,15 +104,6 @@
     top:1vh;
 }
 
-.episodeBtn {
-    width:4vw;
-    height:4vh;
-    background-color:#555;
-    border:none;
-    border-radius:15px;
-    margin:.5vw;
-}
-
 #seasonsPlace {
     position:absolute;
     top:90%;
@@ -107,6 +111,8 @@
     transform:translateX(-50%);
     width:73vw;
     height:6vh;
+    white-space: nowrap;
+    overflow:scroll;
 }
 
 .searchResult {
