@@ -239,9 +239,6 @@ let ids = {
     "Adventure Time Fionna & Cake": "tt15248880",
     "Adventure Time Distant Lands": "tt11165358",
 }
-const reversedIds = Object.fromEntries(
-    Object.entries(ids).map(([show, id]) => [id, show])
-);
 
 let showInfo = {
     "Rick and Morty": { seasons: 7, episodes: [11, 10, 10, 10, 10, 10, 10] },
@@ -358,6 +355,10 @@ let showInfo = {
     "Adventure Time Distant Lands": { seasons: 1, episodes:[4]},
 };
 
+const reversedIds = Object.fromEntries(
+    Object.entries(ids).map(([show, id]) => [id, show])
+);
+
 let currentId;
 
 let isShow = true;
@@ -376,6 +377,9 @@ function toMovie() {
     isShow = false;
     isMovie = true;
 }
+
+let activeSeason = 1;
+let activeEpisode = 1;
 
 document.addEventListener('DOMContentLoaded', () => {
     const iframe = document.getElementById('video');
@@ -437,16 +441,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateIframeSource(id) {
+        const video = document.getElementById("video");
         if (isShow){
             const season = document.getElementById("season")?.value || 1;
             const episode = document.getElementById("episode")?.value || 1;
             currentId = id;
-            iframe.src = `https://vidsrc.xyz/embed/tv?imdb=${id}&season=${season}&episode=${episode}`;
+            iframe.src = `https://vidsrc.xyz/embed/tv?imdb=${id}&season=${activeSeason}&episode=${activeEpisode}`;
             displaySeasonsAndEpisodes(id);
         }else if (isMovie) {
             iframe.src = `https://vidsrc.xyz/embed/movie?imdb=${id}`;
         }
     }
+
 
     function findShowById(idToFind) {
         return reversedIds[idToFind] || null; // Direct lookup
@@ -456,9 +462,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function displaySeasonsAndEpisodes(id) {
         const showInput = findShowById(id);
         const imdbIdDisplay = document.getElementById("imdbIdDisplay");
-        const seasonsContainer = document.getElementById("info");
+        const seasonsContainer = document.getElementById("seasonsPlace");
+        const infoDiv = document.getElementById("info");
         seasonsContainer.innerHTML = "";
     
+        seasonsContainer.innerHTML = null;
+        
         if (ids[showInput]) {
     
             if (showInfo[showInput]) {
@@ -466,15 +475,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 const episodes = showInfo[showInput].episodes;
     
                 for (let i = 0; i < seasons; i++) {
-                    const seasonDiv = document.createElement("p");
-                    seasonDiv.innerText = `S ${i + 1}: ${episodes[i]} eps`;
-                    seasonDiv.classList.add("seasonDis")
-                    seasonsContainer.appendChild(seasonDiv);
+                    const seasonBut = document.createElement("button");
+                    seasonBut.innerText = `S ${i + 1}`;
+                    seasonBut.classList.add("seasonDis")
+                    seasonBut.addEventListener('click', (event) => {
+                        updateSeason(i + 1);
+                        updateEps(id);
+                    });
+                    seasonsContainer.appendChild(seasonBut);
                 }
             }
         }
     }
+
+    function updateEps(id) {
+        const showInput = findShowById(id);
+        const seasons = showInfo[showInput].seasons;
+        const episodes = showInfo[showInput].episodes;
+
+        let seasonDiv = document.getElementById("seasonDiv");
+        seasonDiv.innerHTML = null;
+
+        for (let x = 0; x < episodes[activeSeason-1]; x++) {
+            const episodeBtn = document.createElement("button");
+            episodeBtn.classList.add("episodeBtn");
+            episodeBtn.innerText = `E ${x+1}`;
+            episodeBtn.addEventListener('click', (event) => {
+                updateEpisode(x+1);
+                updateIframeSource(currentId);
+            });
+            seasonDiv.appendChild(episodeBtn);
+        }
+    }
 });
+
+function updateSeason(season){
+    activeSeason = season;
+}
+
+function updateEpisode(ep){
+    activeEpisode = ep;
+}
 
 function playEpisode(){
     if (isShow){

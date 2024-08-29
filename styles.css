@@ -5,7 +5,7 @@
         position:absolute;
         left:50%;
         transform:translateX(-50%);
-        top:50%;
+        top:47%;
         border:#731a87 1vw solid;
     }
 }
@@ -17,7 +17,7 @@
         position:absolute;
         left:50%;
         transform:translateX(-50%);
-        top:50%;
+        top:45%;
         border:#731a87 1vw solid;
     }
 }
@@ -57,28 +57,56 @@
 
 #info {
     width: 75vw;
-    max-width: 50vh; 
-    height: 20%;
+    height: 20vh;
     font-size: 15px;
     text-align: center;
     color: #fff;
     position: absolute;
     left: 50%;
-    top: 90%;
+    top: 95%;
     background-color:#444;
     transform: translateX(-50%);
     overflow: scroll;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+
 }
 
 .seasonDis {
     font-size: 1rem;
-    margin: 10px;
-    flex: 1 1 30%; /* Adjusts the label to take up 30% of the row */
+    margin-right:1vw;
+    width:4vw;
+    height:5vh;
     text-align: center;
+    background-color:#731a87;
+    border:none;
+    border-radius:15px;
+    color:#fff;
+}
+
+#seasonDiv {
+    width:73vw;
+    height: 18vh;
+    background-color:#333;
+    position:absolute;
+    left:1vw;
+    top:1vh;
+}
+
+.episodeBtn {
+    width:4vw;
+    height:4vh;
+    background-color:#555;
+    border:none;
+    border-radius:15px;
+    margin:.5vw;
+}
+
+#seasonsPlace {
+    position:absolute;
+    top:90%;
+    left:50%;
+    transform:translateX(-50%);
+    width:73vw;
+    height:6vh;
 }
 
 .searchResult {
