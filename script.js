@@ -242,6 +242,22 @@ let ids = {
     "Futurama Benders Big Score": "tt0471711",
     "Futurama The Beast With A Billion Backs": "tt1054485",
     "Futurama Into the Wild Green Yonder": "tt1054487",
+    "Deadpool & Wolverine": "tt6263850",
+    "Deadpool": "tt1431045",
+    "Deadpool 2": "tt5463162",
+    "The Boy and the Heron": "tt6587046",
+    "The Matrix": "tt0133093",
+    "The Matrix Resurrection": "tt10838180",
+    "The Matrix Reloaded": "tt0234215",
+    "The Matrix Revolutions": "tt0242653",
+    "The Matrix Recalibrated": "tt0410519",
+    "Transformers (2007)": "tt0418279",
+    "Transformers Revenge Of The Fallen": "tt1055369",
+    "Transformers Dark Of The Moon": "tt1399103",
+    "Transformers Age Of Extinction": "tt2109248",
+    "Transformers The Last Knight": "tt3371366",
+    "Transformers Rise of the Beasts": "tt5090568",
+    "Transformers One": "tt8864596",
 }
 
 let showInfo = {
