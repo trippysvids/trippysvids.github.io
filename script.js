@@ -258,6 +258,7 @@ let ids = {
     "Transformers The Last Knight": "tt3371366",
     "Transformers Rise of the Beasts": "tt5090568",
     "Transformers One": "tt8864596",
+    "Regular Show: The Movie": "tt4920274",
 }
 
 let showInfo = {
