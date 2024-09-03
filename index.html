@@ -6,6 +6,9 @@
     <title>Trippy's Vids</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+    </style>
 </head>
 <body>
     <script>
@@ -27,9 +30,7 @@
         <h1 style="color:#fff" id="titleTxt">Trippy's Vid's</h1>
       </div>
         <input type="text" id="searchInput" placeholder="Enter show/movie title">
-        <input type="text" id="season" placeholder="Season">
-        <button id="play" onclick="playEpisode()">Play</button>
-        <input type="text" id="episode" placeholder="Episode">
+        <button id="play" onclick="playNextEpisode()">Next</button>
         <h1 id="movieOrShow">choose movie or show</h1>
         <button id="movie" onclick="toMovie()">Movie</button>
         <button id="show" onclick="toShow()">TvShow</button>
@@ -43,8 +44,6 @@
         <div id="info">
           <div id="seasonDiv"></div>
         </div> 
-
-        <div id="foot"><h1 id="copyright">©trippy 2024 totally legit copywrite</h1></div>
 
     </div>
 

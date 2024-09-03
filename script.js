@@ -382,7 +382,7 @@ const reversedIds = Object.fromEntries(
 
 let currentId;
 
-let isShow = true;
+let isShow = false;
 let isMovie = false;
 
 function toShow() {
@@ -401,6 +401,10 @@ function toMovie() {
 
 let activeSeason = 1;
 let activeEpisode = 1;
+
+function findShowById(idToFind) {
+    return reversedIds[idToFind] || null; // Direct lookup
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const iframe = document.getElementById('video');
@@ -462,7 +466,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateIframeSource(id) {
-        const video = document.getElementById("video");
         if (isShow){
             const season = document.getElementById("season")?.value || 1;
             const episode = document.getElementById("episode")?.value || 1;
@@ -473,12 +476,6 @@ document.addEventListener('DOMContentLoaded', () => {
             iframe.src = `https://vidsrc.xyz/embed/movie?imdb=${id}`;
         }
     }
-
-
-    function findShowById(idToFind) {
-        return reversedIds[idToFind] || null; // Direct lookup
-    }
-    
 
     function displaySeasonsAndEpisodes(id) {
         const showInput = findShowById(id);
@@ -530,6 +527,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+function playNextEpisode(){
+    const showInput = findShowById(currentId);
+    const seasons = showInfo[showInput].seasons;
+    const episodes = showInfo[showInput].episodes;
+
+    if (activeEpisode+1 > episodes[activeSeason-1]){
+        if (activeSeason+1 > seasons){
+            console.log("No more seasons or episodes");
+            alert("you finished the show congrats");
+        }else {
+            console.log("No more episodes in season");
+            activeSeason += 1;
+            activeEpisode = 1;
+            playEpisode();
+        }
+    }else {
+        console.log("changing to next episode");
+        activeEpisode += 1;
+        playEpisode();
+    }
+
+}
+
 function updateSeason(season){
     activeSeason = season;
 }
@@ -541,8 +561,6 @@ function updateEpisode(ep){
 function playEpisode(){
     if (isShow){
         const iframe = document.getElementById('video');
-        const season = document.getElementById("season")?.value || 1;
-        const episode = document.getElementById("episode")?.value || 1;
-        iframe.src = `https://vidsrc.xyz/embed/tv?imdb=${currentId}&season=${season}&episode=${episode}`;
+        iframe.src = `https://vidsrc.xyz/embed/tv?imdb=${currentId}&season=${activeSeason}&episode=${activeEpisode}`;
     }
 }

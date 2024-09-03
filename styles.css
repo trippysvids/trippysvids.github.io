@@ -1,3 +1,8 @@
+body {
+    font-family:"Tiny5";
+    color: #f3f3f3;
+}
+
 @media screen and (orientation: landscape){
     #video {
         width:32vw;
@@ -18,7 +23,7 @@
         position:absolute;
         left:50%;
         transform:translateX(-50%);
-        top:45%;
+        top:50%;
         border:#731a87 1vw solid;
     }
 
@@ -35,8 +40,9 @@
 }
 
 #imdbID {
-    color:#fff;
+    color:#f3f3f3;
     font-size:3vw;
+    font-family:"Tiny5";
 }
 
 .results-list {
@@ -49,6 +55,7 @@
 .results-list button {
     background: none;
     border: none;
+    font-family:"Tiny5";
     color: blue;
     cursor: pointer;
     text-decoration: underline;
@@ -66,10 +73,11 @@
     position: absolute;
     left: 50%;
     top: 95%;
-    background-color:#444;
+    background-color:#333;
     transform: translateX(-50%);
     overflow: scroll;
-    padding-bottom:6vh;
+    padding-bottom:15vh;
+    font-family:"Tiny5";
 
 }
 
@@ -82,8 +90,8 @@
     background-color:#731a87;
     border:none;
     border-radius:15px;
-    color:#fff;
-
+    color:#f3f3f3;
+    font-family:"Tiny5";
 }
 
 .episodeBtn {
@@ -93,6 +101,8 @@
     border:none;
     border-radius:15px;
     margin:.5vw;
+    font-family:"Tiny5";
+    color:#f2f2f2;
 }
 
 
@@ -121,11 +131,12 @@
     background:none;
     border:none;
     background-color:#333;
-    color:#fff;
+    color:#f3f3f3;
     width:69vw;
     height:5vh;
     margin-left:3vw;
     margin-top:2vw;
+    font-family:"Tiny5";
 }
 
 #searchInput {
@@ -134,6 +145,7 @@
     height:3vh;
     width:40vw;
     left:15%;
+    font-family:"Tiny5";
 
 }
 
@@ -148,6 +160,7 @@
     background-color: #444;
     color:#fff;
     border:3px #731a87 solid;
+    font-family:"Tiny5";
 }
 
 .searchResult:hover, .searchResult:active {
@@ -159,6 +172,7 @@
     top:30%;
     width:75vw;
     height:15vh;
+    font-family:"Tiny5";
     overflow:scroll;
     background-color:#444;
     left:50%;
@@ -169,6 +183,7 @@
     position:absolute;
     top:10%;
     font-size:2vh;
+    font-family:"Tiny5";
     color:#fff;
     left:50%;
     transform:translateX(-50%);
@@ -181,6 +196,7 @@
     height:5%;
     background-color:#fff;
     border:#d1132f solid 3px;
+    font-family:"Tiny5";
 }
 
 #movie:disabled, #show:disabled {
@@ -218,8 +234,9 @@
     left:50%;
     transform:translateX(-50%);
     top:85%;
-    width:7vw;
-    height:3vh;
+    width:15vw;
+    height:4vh;
+    font-family:"Tiny5";
 }
 
 #title {
