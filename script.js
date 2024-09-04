@@ -259,7 +259,8 @@ let ids = {
     "Transformers Rise of the Beasts": "tt5090568",
     "Transformers One": "tt8864596",
     "Regular Show: The Movie": "tt4920274",
-}
+    "Spider Riders": "tt0813896",
+};
 
 let showInfo = {
     "Rick and Morty": { seasons: 7, episodes: [11, 10, 10, 10, 10, 10, 10] },
@@ -374,6 +375,7 @@ let showInfo = {
     "The Walking Dead": { seasons: 11, episodes: [6, 16, 16, 16, 16, 16, 16, 16, 16, 24, 24] },
     "Adventure Time Fionna & Cake": { seasons: 1, episodes:[11]},
     "Adventure Time Distant Lands": { seasons: 1, episodes:[4]},
+    "Spider Riders": {seasons: 1, episodes:[50]}
 };
 
 const reversedIds = Object.fromEntries(
