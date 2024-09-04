@@ -497,7 +497,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 for (let i = 0; i < seasons; i++) {
                     const seasonBut = document.createElement("button");
                     seasonBut.innerText = `S ${i + 1}`;
-                    seasonBut.classList.add("seasonDis")
+                    seasonBut.id = `s${i+1}`;
+                    seasonBut.classList.add("seasonDis");
                     seasonBut.addEventListener('click', (event) => {
                         updateSeason(i + 1);
                         updateEps(id);
@@ -520,6 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const episodeBtn = document.createElement("button");
             episodeBtn.classList.add("episodeBtn");
             episodeBtn.innerText = `E ${x+1}`;
+            episodeBtn.id = `E${x+1}`;
             episodeBtn.addEventListener('click', (event) => {
                 updateEpisode(x+1);
                 updateIframeSource(currentId);
@@ -549,8 +551,55 @@ function playNextEpisode(){
         activeEpisode += 1;
         playEpisode();
     }
-
+    
 }
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+let prevSeas, prevEpis;
+function updateSelection(){
+    console.log(`S${activeSeason} E${activeEpisode}`);
+    if (prevEpis){
+        prevEpis.style.backgroundColor = "#FEF3E2";
+        prevEpis.style.color = "#333";
+    }
+    if (prevSeas){
+        prevSeas.style.backgroundColor = "#BBE9FF";
+        prevSeas.style.color = "#333";
+    }
+
+    let newseason = document.getElementById(`s${activeSeason}`);
+    let newepisode = document.getElementById(`E${activeEpisode}`);
+    prevSeas = newseason;
+    prevEpis = newepisode;
+    if (newseason) {
+        newseason.style.backgroundColor = "#B1AFFF";
+     } else {
+        console.error(`Element with ID S${activeSeason} not found`);
+    }
+
+    if (newepisode) {
+        newepisode.style.backgroundColor = "#EF5A6F";
+    } else {
+        console.error(`Element with ID E${activeEpisode} not found`);
+    }
+}
+
+async function update(){
+    await sleep(100);
+    if (isShow){
+        updateSelection();
+    }
+
+    window.requestAnimationFrame(update);
+}
+
+function init(){
+    window.requestAnimationFrame(update);
+}
+init();
 
 function updateSeason(season){
     activeSeason = season;

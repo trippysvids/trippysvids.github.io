@@ -11,7 +11,7 @@ body {
         left:50%;
         transform:translateX(-50%);
         top:47%;
-        border:#731a87 1vw solid;
+        border:#BBE9FF 4px solid;
     }
     
 }
@@ -24,13 +24,13 @@ body {
         left:50%;
         transform:translateX(-50%);
         top:50%;
-        border:#731a87 1vw solid;
+        border:#BBE9FF 4px solid;
     }
 
 }
 
 #player {
-    background-color:#333;
+    background-color:#606676;
     width:101vw;
     height:101vh;
     position:fixed;
@@ -45,25 +45,6 @@ body {
     font-family:"Tiny5";
 }
 
-.results-list {
-    list-style-type: none;
-    padding: 0;
-}
-.results-list li {
-    margin: 5px 0;
-}
-.results-list button {
-    background: none;
-    border: none;
-    font-family:"Tiny5";
-    color: blue;
-    cursor: pointer;
-    text-decoration: underline;
-}
-.results-list button:hover {
-    text-decoration: none;
-}
-
 #info {
     width: 75vw;
     height: 20vh;
@@ -73,7 +54,7 @@ body {
     position: absolute;
     left: 50%;
     top: 95%;
-    background-color:#333;
+    background-color:#606676;
     transform: translateX(-50%);
     overflow: scroll;
     padding-bottom:15vh;
@@ -87,29 +68,29 @@ body {
     width:12vw;
     height:5vh;
     text-align: center;
-    background-color:#731a87;
+    background-color:#BBE9FF;
     border:none;
     border-radius:15px;
-    color:#f3f3f3;
+    color:#333;
     font-family:"Tiny5";
 }
 
 .episodeBtn {
     width:9vw;
     height:4vh;
-    background-color:#555;
+    background-color:#FEF3E2;
     border:none;
     border-radius:15px;
     margin:.5vw;
     font-family:"Tiny5";
-    color:#f2f2f2;
+    color:#333;
 }
 
 
 #seasonDiv {
     width:73vw;
     height: 18vh;
-    background-color:#333;
+    background-color:#606676;
     position:absolute;
     left:1vw;
     top:1vh;
@@ -130,12 +111,12 @@ body {
 .searchResult {
     background:none;
     border:none;
-    background-color:#333;
-    color:#f3f3f3;
-    width:69vw;
+    background-color:#BBE9FF;
+    color:#333;
+    width:46vw;
     height:5vh;
-    margin-left:3vw;
-    margin-top:2vw;
+    margin-left:2vw;
+    margin-top:1vw;
     font-family:"Tiny5";
 }
 
@@ -143,8 +124,8 @@ body {
     position:absolute;
     top:25%;
     height:3vh;
-    width:40vw;
-    left:15%;
+    width:30vw;
+    left:25%;
     font-family:"Tiny5";
 
 }
@@ -157,61 +138,66 @@ body {
     height:4vh;
     background:none;
     border:none;
-    background-color: #444;
-    color:#fff;
-    border:3px #731a87 solid;
+    background-color: #BBE9FF;
+    color:#333;
     font-family:"Tiny5";
 }
 
+#searchButton:hover, #searchButton:active {
+    background-color:#B1AFFF;
+}
+
 .searchResult:hover, .searchResult:active {
-    background-color:#731a87;
+    background-color:#B1AFFF;
 }
 
 #resultsContainer {
     position:absolute;
     top:30%;
-    width:75vw;
+    width:50vw;
     height:15vh;
     font-family:"Tiny5";
     overflow:scroll;
-    background-color:#444;
+    background-color:#4c515e;
     left:50%;
     transform:translateX(-50%);
+    border-radius:15px;
 }
 
 #movieOrShow {
     position:absolute;
-    top:10%;
-    font-size:2vh;
+    top:15%;
     font-family:"Tiny5";
     color:#fff;
     left:50%;
+    width:50vw;
+    height:3vw;
     transform:translateX(-50%);
 }
 
 #movie, #show {
     position:absolute;
     top:15%;
-    width:30vw;
-    height:5%;
-    background-color:#fff;
-    border:#d1132f solid 3px;
+    width:20vw;
+    height:100%;
+    background-color:#FEF3E2;
+    border:#BBE9FF solid 3px;
     font-family:"Tiny5";
 }
 
 #movie:disabled, #show:disabled {
-    border:#13d149 solid 2px;
-    background-color:#999;
-    color:#777;
+    border:#EF5A6F solid 2px;
+    background-color:#e8decf;
+    color:#555;
 }
 
 #movie {
-    left:15%;
+    left:5%;
 
 }
 
 #show {
-    left:50%;
+    right:5%;
 }
 
 #season, #episode {
@@ -233,22 +219,34 @@ body {
     position:absolute;
     left:50%;
     transform:translateX(-50%);
-    top:85%;
+    top:83%;
     width:15vw;
     height:4vh;
     font-family:"Tiny5";
+    background:none;
+    border:none;
+    background-color:#EF5A6F;
+    color:#333;
+    border-radius:5px;
+}
+
+#play:hover, #play:active {
+    background-color:#d84f61;
 }
 
 #title {
     position:absolute;
-    top:0;
-    left:0;
-    background-color:#731a87;
-    width:100vw;
+    top:2vh;
+    left:50%;
+    background-color:#BBE9FF;
+    border-radius:15px;
+    width:60vw;
     height:10vh;
     text-align:center;
+    color:#333;
+    transform:translateX(-50%);
 }
 
 #titleText {
-    color:#fff;
+    color:#333;
 }
