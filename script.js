@@ -378,11 +378,16 @@ let showInfo = {
     "Adventure Time Distant Lands": { seasons: 1, episodes:[4]},
     "Spider Riders": {seasons: 1, episodes:[50]},
     "FLCL: Fooly Cooly": {seasons: 1, episodes:[6]},
+    
 };
 
 const reversedIds = Object.fromEntries(
     Object.entries(ids).map(([show, id]) => [id, show])
 );
+
+function killPopup(){
+    document.getElementById("popup").style.display = "none";
+}
 
 let currentId;
 

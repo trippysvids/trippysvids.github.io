@@ -488,3 +488,37 @@ body {
     left:0;
     overflow:scroll;
 }
+
+#popup {
+    width:90vw;
+    height:60vh;
+    background-color:#4c515e;
+    border:#EF5A6F 5px solid;
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    z-index:150;
+    text-align:center;
+}
+
+a {
+    color:#BBE9FF;
+}
+
+a:active {
+    color:#B1AFFF;
+}
+
+#killPopup {
+    color:#EF5A6F;
+    text-decoration: underline;
+    background:none;
+    border:none;
+    font-family: "Tiny5";
+    font-size:2rem;
+    position:absolute;
+    bottom:20%;
+    left:50%;
+    transform:translateX(-50%);
+}
