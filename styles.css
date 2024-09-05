@@ -34,14 +34,15 @@ body {
 
     #movieOrShow {
         position:absolute;
-        top:25%;
+        top:20%;
         font-family:"Tiny5";
         color:#fff;
         left:50%;
-        width:50vw;
-        height:3vw;
+        width:60vw;
+        height:12vw;
         transform:translateX(-50%);
     }
+
 
 
     #imdbID {
@@ -171,17 +172,16 @@ body {
         border-radius:15px;
     }
     
-    #movie, #show {
+    #movie, #show, #vidsrc, #multiembed {
         position:absolute;
-        top:15%;
-        width:20vw;
-        height:100%;
+        width:25vw;
+        height:20%;
         background-color:#FEF3E2;
         border:#BBE9FF solid 3px;
         font-family:"Tiny5";
     }
     
-    #movie:disabled, #show:disabled {
+    #movie:disabled, #show:disabled, #vidsrc:disabled, #multiembed:disabled {
         border:#EF5A6F solid 2px;
         background-color:#e8decf;
         color:#555;
@@ -189,10 +189,21 @@ body {
     
     #movie {
         left:5%;
-    
+        top:10%;
     }
     
     #show {
+        right:5%;
+        top:10%;
+    }
+    
+    #vidsrc {
+        bottom:45%;
+        left:5%;
+    }
+
+    #multiembed {
+        bottom:45%;
         right:5%;
     }
     
@@ -265,12 +276,12 @@ body {
 
     #movieOrShow {
         position:absolute;
-        top:15%;
+        top:12.5%;
         font-family:"Tiny5";
         color:#fff;
         left:50%;
         width:60vw;
-        height:8vw;
+        height:16vw;
         transform:translateX(-50%);
     }
 
@@ -402,17 +413,16 @@ body {
         border-radius:15px;
     }
     
-    #movie, #show {
+    #movie, #show, #vidsrc, #multiembed {
         position:absolute;
-        top:15%;
         width:25vw;
-        height:100%;
+        height:32%;
         background-color:#FEF3E2;
         border:#BBE9FF solid 3px;
         font-family:"Tiny5";
     }
     
-    #movie:disabled, #show:disabled {
+    #movie:disabled, #show:disabled, #vidsrc:disabled, #multiembed:disabled {
         border:#EF5A6F solid 2px;
         background-color:#e8decf;
         color:#555;
@@ -420,13 +430,24 @@ body {
     
     #movie {
         left:5%;
-    
+        top:15%;
     }
     
     #show {
         right:5%;
+        top:15%;
     }
     
+    #vidsrc {
+        bottom:15%;
+        left:5%;
+    }
+
+    #multiembed {
+        bottom:15%;
+        right:5%;
+    }
+
     #season, #episode {
         position:absolute;
         top:85%;

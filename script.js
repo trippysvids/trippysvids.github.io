@@ -393,6 +393,8 @@ let currentId;
 
 let isShow = false;
 let isMovie = false;
+let isVid = true;
+let isMulti = false;
 
 function toShow() {
     document.getElementById("show").disabled = true;
@@ -406,6 +408,20 @@ function toMovie() {
     document.getElementById("movie").disabled = true;
     isShow = false;
     isMovie = true;
+}
+
+function toMulti(){
+    document.getElementById("vidsrc").disabled = false;
+    document.getElementById("multiembed").disabled = true;
+    isVid = false;
+    isMulti = true;
+}
+
+function toVid(){
+    document.getElementById("multiembed").disabled = false;
+    document.getElementById("vidsrc").disabled = true;
+    isMulti = false;
+    isVid = true;
 }
 
 let activeSeason = 1;
@@ -479,10 +495,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const season = document.getElementById("season")?.value || 1;
             const episode = document.getElementById("episode")?.value || 1;
             currentId = id;
-            iframe.src = `https://vidsrc.xyz/embed/tv?imdb=${id}&season=${activeSeason}&episode=${activeEpisode}`;
+            if (isVid){
+                iframe.src = `https://vidsrc.xyz/embed/tv?imdb=${id}&season=${activeSeason}&episode=${activeEpisode}`;
+            }
+            if (isMulti){
+                iframe.src = `https://multiembed.mov/?video_id=${id}&s=${activeSeason}&e=${activeEpisode}`;
+            }
             displaySeasonsAndEpisodes(id);
         }else if (isMovie) {
-            iframe.src = `https://vidsrc.xyz/embed/movie?imdb=${id}`;
+            if (isVid){
+                iframe.src = `https://vidsrc.xyz/embed/movie?imdb=${id}`;
+            }
+            if (isMulti){
+                iframe.src = `https://multiembed.mov/?video_id=${id}`;
+            }
+        
         }
     }
 
@@ -619,6 +646,11 @@ function updateEpisode(ep){
 function playEpisode(){
     if (isShow){
         const iframe = document.getElementById('video');
-        iframe.src = `https://vidsrc.xyz/embed/tv?imdb=${currentId}&season=${activeSeason}&episode=${activeEpisode}`;
+        if (isVid){
+            iframe.src = `https://vidsrc.xyz/embed/tv?imdb=${currentId}&season=${activeSeason}&episode=${activeEpisode}`;
+        }
+        if (isMulti){
+            iframe.src = `https://multiembed.mov/?video_id=${currentId}&s=${activeSeason}&e=${activeEpisode}`;
+        }
     }
 }
