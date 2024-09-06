@@ -2,6 +2,7 @@ let ids = {
     "Rick and Morty": "tt2861424",
     "South Park": "tt0121955",
     "Family Guy": "tt0182576",
+    "Smiling Friends": "tt12074628",
     "The Simpsons": "tt0096697",
     "BoJack Horseman": "tt3398228",
     "Futurama": "tt0149460",
@@ -378,7 +379,7 @@ let showInfo = {
     "Adventure Time Distant Lands": { seasons: 1, episodes:[4]},
     "Spider Riders": {seasons: 1, episodes:[50]},
     "FLCL: Fooly Cooly": {seasons: 1, episodes:[6]},
-    
+    "Smiling Friends": {seasons: 2, episodds:[9,8]},
 };
 
 const reversedIds = Object.fromEntries(
