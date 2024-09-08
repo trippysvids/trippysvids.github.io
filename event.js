@@ -109,10 +109,6 @@ function toVid(){
 document.addEventListener('DOMContentLoaded', () => {
     const resultsContainer = document.getElementById('resultContainer');
     const infoDiv = document.getElementById('info');
-    const query = searchInput.value;
-    if (query) {
-        searchIMDb(query);
-    }
 
     function listShows() {
         resultsContainer.innerHTML = '';
