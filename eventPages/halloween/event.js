@@ -242,7 +242,8 @@ document.addEventListener('DOMContentLoaded', () => {
             seasons = showInfo[showInput].seasons;
             episodes = showInfo[showInput].episodes;
             currentEpisodes = episodes[activeSeason - 1]; // Get current season's episodes
-    
+        }
+
             // Check if episodes are an array or a single value
             if (Array.isArray(currentEpisodes)) {
                 const nextIndex = currentEpisodes.indexOf(activeEpisode) + 1;
@@ -279,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             }
-        }
+        
     }
     
     function moveToNextShow() {
@@ -292,7 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             const nextShowTitle = showTitles[nextShowIndex];
             currentId = ids[nextShowTitle];
-            isshowormovie(currentId);
             updateIframeSource(currentId);
         }
     }
