@@ -1,0 +1,544 @@
+
+
+@media screen and (orientation: landscape){
+    #welcome::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.3); 
+        border-radius: 10px;
+        background-color:#333;
+    }
+
+    #welcome::-webkit-scrollbar {
+        width: 12px;
+        background-color:#EF5A6F;
+    }
+    
+    #welcome::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color:#d44e60;
+        -webkit-box-shadow: inset 0 0 5px #c7495aca; 
+    }
+
+    #welcome {
+        scrollbar-width:14px; /* Makes scrollbar thinner */
+        scrollbar-color: #EF5A6F #d44e60; /* Thumb and track colors */
+    }
+
+    #welcome {
+        width:90vw;
+        height:50vh;
+        background-color:#4c515e;
+        border:#EF5A6F 5px solid;
+        position:absolute;
+        left:50%;
+        top:60%;
+        transform:translate(-50%, -50%);
+        z-index:150;
+        text-align:center;
+        overflow-y:scroll;
+        -ms-overflow-style: none;
+    }
+
+    #welcomeText {
+        font-family: "Tiny5";
+        font-size:1.5rem;
+        padding:2rem;
+        color:#FEF3E2;
+    }
+
+    #buttons {
+        position:absolute;
+        width:100vw;
+        top:15%;
+        left:50%;
+        transform:translateX(-50%);
+    }
+    
+    #shows {
+        position:absolute;
+        left:15%;
+        margin-right:2vw;
+    }
+    
+    #movies {
+        position:absolute;
+        right:15%;
+        margin-left:2vw;
+    }
+
+    #arrowLeft {
+        width:2vw;
+        position:absolute;
+        top:60%;
+        left:5%;
+        transform:translateY(-50%);
+    }
+
+    #arrowRight {
+        width:2vw;
+        position:absolute;
+        top:60%;
+        right:5%;
+        transform:translateY(-50%);
+    }
+
+    .uiButton {
+        font-family:"Tiny5";
+        font-size:1rem;
+    }
+    
+    .titleScreen {
+        border-radius:15px;
+        z-index:10;
+        transition: transform 0.3s ease; 
+        will-change: transform;
+        font-family:"Tiny5";
+        font-size:2rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .titleScreenActive {
+        left:50%;
+        top:60%;
+        height:70vh;
+        transition: transform 0.3s ease; 
+        will-change: transform;
+        z-index:50;
+    }
+    
+    .titleScreenInactive {
+        left:60%;
+        top:60%;
+        height:60vh;
+        transition: transform 0.3s ease; 
+        will-change: transform;
+        z-index:-1;
+    }
+
+    #halloween {
+        background-image:url(images/halloween.png);
+        background-position:0 0;
+        background-size:100% 100%;
+        width:40vw;
+        position:absolute;
+        transform:translate(-50%, -50%);
+    }
+
+    #christmas {
+        background-image:url(images/christmas.png);
+        background-position:0 0;
+        background-size:100% 100%;
+        width:40vw;
+        position:absolute;
+        transform:translate(-50%, -50%);
+    }
+
+    #anime {
+        background-image:url(images/anime.png);
+        background-position:0 0;
+        background-size:100% 100%;
+        width:40vw;
+        color: #BBE9FF;
+        position:absolute;
+        transform:translate(-50%, -50%);
+    }
+
+    #fakeCard {
+        background-image:url(images/fakecard.png);
+        background-position:0 0;
+        background-size:100% 100%;
+        width:50vw;
+        height:55vh;
+        position:absolute;
+        left:40%;
+        transform:translate(-50%, -50%);
+        z-index:-3;
+    }
+
+    @keyframes exitRight {
+        0% {left:50%;}
+        100% {left:100%;}
+    }
+    
+    @keyframes exitLeft {
+        0% {left:50%;}
+        100% {left:-200px;}
+    }
+    
+    @keyframes enterRight {
+        0%{left:100%;}
+        100% {left:50%;}
+    }
+    
+    @keyframes enterLeft {
+        0%{left:-200px;}
+        100% {left:50%;}
+    }
+    
+    .enterRight {
+        animation: enterRight 1s linear;
+    }
+    .enterLeft {
+        animation: enterLeft 1s linear;
+    }
+    .exitLeft {
+        animation: exitLeft 1s linear;
+    }
+    .exitRight {
+        animation: exitRight 1s linear;
+    }
+    
+
+}
+
+@media screen and (orientation: portrait){
+    #welcome::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.3); 
+        border-radius: 10px;
+        background-color:#EF5A6F;
+    }
+
+    #welcome::-webkit-scrollbar {
+        width: 12px;
+        background-color:#333;
+    }
+    
+    #welcome::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 5px #EF5A6F;
+    }
+
+    #welcome {
+        scrollbar-width:12px; 
+        scrollbar-color: #EF5A6F #EF5A6F; /* Thumb and track colors */
+    }
+
+
+    #welcome {
+        width:90vw;
+        height:70vh;
+        background-color:#4c515e;
+        border:#EF5A6F 5px solid;
+        position:absolute;
+        left:50%;
+        top:55%;
+        transform:translate(-50%, -50%);
+        z-index:150;
+        text-align:center;
+        overflow-y:scroll;
+        overflow-x:none;
+        -ms-overflow-style: none;
+    }
+
+    #welcomeText {
+        font-family: "Tiny5";
+        font-size:1.5rem;
+        padding:2rem;
+        color:#FEF3E2;
+    }
+
+    #buttons {
+        position:absolute;
+        width:100vw;
+        top:15%;
+        left:50%;
+        transform:translateX(-50%);
+    }
+    
+    #shows {
+        position:absolute;
+        left:15%;
+        margin-right:2vw;
+    }
+    
+    #movies {
+        position:absolute;
+        right:15%;
+        margin-left:2vw;
+    }
+
+    #arrowLeft {
+        width:2vw;
+        position:absolute;
+        top:60%;
+        left:5%;
+        transform:translateY(-50%);
+    }
+
+    #arrowRight {
+        width:2vw;
+        position:absolute;
+        top:60%;
+        right:5%;
+        transform:translateY(-50%);
+    }
+
+    .uiButton {
+        font-family:"Tiny5";
+        font-size:1rem;
+    }
+    
+    .titleScreen {
+        border-radius:15px;
+        z-index:10;
+        transition: transform 0.3s ease; 
+        will-change: transform;
+        font-family:"Tiny5";
+        font-size:2rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .titleScreenActive {
+        left:50%;
+        top:60%;
+        height:50vh;
+        transition: transform 0.3s ease; 
+        will-change: transform;
+        z-index:50;
+    }
+    
+    .titleScreenInactive {
+        left:60%;
+        top:60%;
+        height:45vh;
+        transition: transform 0.3s ease; 
+        will-change: transform;
+        z-index:-1;
+    }
+
+    #halloween {
+        background-image:url(images/halloween.png);
+        background-position:0 0;
+        background-size:100% 100%;
+        width:60vw;
+        position:absolute;
+        transform:translate(-50%, -50%);
+    }
+
+    #christmas {
+        background-image:url(images/christmas.png);
+        background-position:0 0;
+        background-size:100% 100%;
+        width:60vw;
+        position:absolute;
+        transform:translate(-50%, -50%);
+    }
+
+    #anime {
+        background-image:url(images/anime.png);
+        background-position:0 0;
+        background-size:100% 100%;
+        width:60vw;
+        color: #BBE9FF;
+        position:absolute;
+        transform:translate(-50%, -50%);
+    }
+
+    #fakeCard {
+        background-image:url(images/fakecard.png);
+        background-position:0 0;
+        background-size:100% 100%;
+        width:60vw;
+        height:40vh;
+        position:absolute;
+        left:40%;
+        transform:translate(-50%, -50%);
+        z-index:-3;
+    }
+
+    @keyframes exitRight {
+        0% {left:50%;}
+        100% {left:100%;}
+    }
+    
+    @keyframes exitLeft {
+        0% {left:50%;}
+        100% {left:-200px;}
+    }
+    
+    @keyframes enterRight {
+        0%{left:100%;}
+        100% {left:50%;}
+    }
+    
+    @keyframes enterLeft {
+        0%{left:-200px;}
+        100% {left:50%;}
+    }
+    
+    .enterRight {
+        animation: enterRight 1s linear;
+    }
+    .enterLeft {
+        animation: enterLeft 1s linear;
+    }
+    .exitLeft {
+        animation: exitLeft 1s linear;
+    }
+    .exitRight {
+        animation: exitRight 1s linear;
+    }
+    
+
+}
+
+body {
+    background-color:#4c515e;
+    overflow:hidden;
+    
+}
+
+#title {
+    background-color:#E76161;
+    padding:1px;
+    position:absolute;
+    top:0%;
+    left:50%;
+    transform:translateX(-50%);
+    width:100vw;
+    text-align:center;
+    color:#333;
+    font-family:"Tiny5";
+
+}
+
+.important {
+    font-family: "Tiny5";
+    font-size:1.75rem;
+    color:#EF5A6F;
+}
+
+a {
+    color:#BBE9FF;
+}
+
+a:active {
+    color:#B1AFFF;
+}
+
+#killPopup {
+    color:#BBE9FF;
+    text-decoration: underline;
+    background:none;
+    border:none;
+    font-family: "Tiny5";
+    font-size:1.5rem;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    padding-bottom:20px;
+}
+
+#killPopup:hover, #killPopup:active {
+    color:#B1AFFF;
+}
+
+/* From Uiverse.io by zjssun */ 
+.uiButton {
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    background-color: #E76161;
+    transition: all 0.2s ease;
+}
+
+.uiButton:disabled {
+    background-color:#B1AFFF;
+    color:#B1AFFF;
+}
+  
+.uiButton:hover, .uiButton:active {
+    transform:scale(0.90);
+    background-color: #B1AFFF;
+}
+
+.uiButton:before,
+.uiButton:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+}
+  
+.uiButton:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #B1AFFF 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, #B1AFFF 20%, transparent 30%),
+      radial-gradient(circle, #B1AFFF 20%, transparent 20%),
+      radial-gradient(circle, #EF5A6F 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #EF5A6F 15%, transparent 20%),
+      radial-gradient(circle, #B1AFFF 20%, transparent 20%),
+      radial-gradient(circle, #EF5A6F 20%, transparent 20%),
+      radial-gradient(circle, #B1AFFF 20%, transparent 20%),
+      radial-gradient(circle, #B1AFFF 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+}
+  
+@keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+  
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+  
+.uiButton:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #B1AFFF 20%, transparent 20%),
+      radial-gradient(circle, #EF5A6F 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #B1AFFF 15%, transparent 20%),
+      radial-gradient(circle, #B1AFFF 20%, transparent 20%),
+      radial-gradient(circle, #EF5A6F 20%, transparent 20%),
+      radial-gradient(circle, #B1AFFF 20%, transparent 20%),
+      radial-gradient(circle, #EF5A6F 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.6s ease;
+}
+  
+@keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+  
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+   
+.shape {
+    fill: #0E1822;
+}
+   
+
+

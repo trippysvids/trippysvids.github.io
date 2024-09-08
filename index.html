@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trippy's Vids</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+    </style>
+</head>
+<body>
+    <div id="title"><h1>Trippy's Vids</h1></div>
+
+    <div class="welcome" id="welcome">
+        <h1 id="welcomeText">Welcome to Trippy's Vids. This website contains potentially dangerous ads. I recommend using an adblocker you can get the one I use at 
+            <a target="_blank" href="https://ublockorigin.com/">Ublock Origin</a>.
+            <span>
+                <h1 class="important">If you cannot access an adblocker, DONT WORRY just back out of the opened tabs as quick as possible.</h1>
+            </span>
+        </h1>
+        <button id="killPopup" onclick="killPopup()">ok now waste time</button>
+    </div>
+
+    <ul id="categList">
+        <li><div onclick="changePage(`eventPages/halloween/halloween.html`)" id="halloween" class="titleScreen titleScreenActive"></div></li>
+        <li><div onclick="" id="christmas" class="titleScreen titleScreenInactive"></div></li>
+        <li><div onclick="changePage(`eventPages/anime/anime.html`)" id="anime" class="titleScreen titleScreenInactive">Cartoons/Anime</div></li>
+        <li><div id="fakeCard" class="titleScreen titleScreenInactive"></div></li>
+    </ul>
+    <div id="arrowLeft" class="uiButton"><</div>
+    <div id="arrowRight" class="uiButton">></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

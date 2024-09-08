@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trippy's Vids</title>
+    <link rel="stylesheet" href="anime.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+    </style>
+</head>
+<body>
+    <div id="player">
+      <div id="title">
+        <button id="home" onclick="changePage(`../../index.html`)"><</button>
+        <h1 style="color:#333" id="titleTxt">Anime & Cartoons</h1>
+      </div>
+        <input type="text" id="searchInput" placeholder="Enter show/movie title">
+        <button id="searchButton">Search</button>
+        <button id="play" onclick="playNextEpisode()">Next</button>
+        <div id="movieOrShow">
+          <button id="vidsrc" onclick="toVid()" disabled="true">Vidsrc</button>
+          <button id="multiembed" onclick="toMulti()">MultiEmbed</button>
+        </div>
+        <div id="resultsContainer">
+          <div id="imdbID"></div>
+        </div>
+
+        <iframe id="video" src="https://vidsrc.xyz/embed/tv?imdb=tt0944947&season=1&episode=1" title="Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="seasonsPlace"></div>
+        <div id="info">
+          <div id="seasonDiv"></div>
+        </div> 
+        <div id="landscapeMargin"><h1>Trippys Vids™</h1></div>
+    </div>
+
+
+    <script src="event.js"></script>
+</body>
+</html>

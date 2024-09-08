@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="halloween.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+    </style>
+</head>
+<body>
+    <div id="title">
+      <button id="home" onclick="changePage(`../../index.html`)"><</button>
+      <h1 id="titleText">Halloween Specials</h1>
+    </div>
+
+    <div id="seasonsPlace"></div>
+    <div id="info">
+      <div id="seasonDiv"></div>
+    </div>
+
+    <iframe id="video" src="https://vidsrc.xyz/embed/tv?imdb" title="Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <button id="play">Next</button>
+    <div id="programList">
+      <h1 id="plTitle">Planned Programs</h1>
+      <div id="resultContainer">
+      </div>
+    </div>
+
+    <div id="landscapeMargin"><h1>Trippys Vids™</h1></div>
+
+    <script src="event.js"></script>
+</body>
+</html>
