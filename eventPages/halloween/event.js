@@ -28,6 +28,7 @@ let ids = {
     "Night of the Living Dead": "tt0063350",
     "The Cabin In The Woods": "tt1259521",
     "American Dad": "tt0397306",
+    "Malignant": "tt3811906",
     "Mandy": "tt6998518",
     "Evil Bong": "tt0829424",
     "A Nightmare On Elm Street (1984)": "tt0087800",
