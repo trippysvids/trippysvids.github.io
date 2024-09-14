@@ -63,7 +63,11 @@ let ids = {
     "Halloween (2018)": "tt1502407",
     "Halloween Kills (2021)": "tt10665338",
     "Halloween Ends (2022)": "tt10665342",
-     
+    "The Purge (2013)": "tt2184339",
+    "The Purge: Anarchy": "tt2975578",
+    "The Purge Election Year": "tt4094724",
+    "The First Purge": "tt6133466",
+    "The Forever Purge": "tt10327252",
 };
 
 let showInfo = {
