@@ -281,11 +281,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
                 for (let i = 0; i < seasons; i++) {
                     const seasonBut = document.createElement("button");
-                    seasonBut.innerText = `S ${i + 1}`;
+                    seasonBut.innerText = `S ${i+1}`;
                     seasonBut.id = `s${i+1}`;
                     seasonBut.classList.add("seasonDis");
                     seasonBut.addEventListener('click', (event) => {
-                        updateSeason(i + 1);
+                        updateSeason(i);
                         updateEps(id);
                     });
                     seasonsContainer.appendChild(seasonBut);
