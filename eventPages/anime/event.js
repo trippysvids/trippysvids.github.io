@@ -56,7 +56,8 @@ let ids = {
     "Moral Orel": "tt0476922",
     "Mighty Magiswords": "tt4847134",
     "Krapopolis": "tt14016574",
-    "Beastars": "tt11043632"
+    "Beastars": "tt11043632",
+    "Disenchantment": "tt5363918",
 };
 
 let showInfo = {
@@ -110,7 +111,8 @@ let showInfo = {
     "Moral Orel": {seasons: 3, episodes:[13, 13, 13]},
     "Mighty Magiswords": {seasons: 2, episodes:[20, 68]},
     "Krapopolis": {seasons: 1, episodes:[10]},
-    "Beastars": {seasons: 3, episodes:[12, 12, 12]}
+    "Beastars": {seasons: 3, episodes:[12, 12, 12]},
+    "Disenchantment": {seasons: 5, episodes:[10, 10, 10, 10, 10]},
 };
   
 
