@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     seasonBut.id = `s${i+1}`;
                     seasonBut.classList.add("seasonDis");
                     seasonBut.addEventListener('click', (event) => {
-                        updateSeason(i);
+                        updateSeason(i+1);
                         updateEps(id);
                     });
                     seasonsContainer.appendChild(seasonBut);
