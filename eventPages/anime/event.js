@@ -58,6 +58,12 @@ let ids = {
     "Krapopolis": "tt14016574",
     "Beastars": "tt11043632",
     "Disenchantment": "tt5363918",
+    "Over the Garden Wall": "tt3718778",
+    "The Wild Robot": "tt29623480",
+    "Coraline": "tt0327597",
+    "James and the Giant Peach": "tt0116683",
+    "The Incredible Story of the Giant Pear": "tt7006206",
+
 };
 
 let showInfo = {
@@ -113,6 +119,7 @@ let showInfo = {
     "Krapopolis": {seasons: 1, episodes:[10]},
     "Beastars": {seasons: 3, episodes:[12, 12, 12]},
     "Disenchantment": {seasons: 5, episodes:[10, 10, 10, 10, 10]},
+    "Over the Garden Wall": {seasons: 1, episodes:[10]},
 };
   
 
