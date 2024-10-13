@@ -68,6 +68,7 @@ let ids = {
     "The Purge Election Year": "tt4094724",
     "The First Purge": "tt6133466",
     "The Forever Purge": "tt10327252",
+    "Scooby Doo": "tt0267913",
 };
 
 let showInfo = {
